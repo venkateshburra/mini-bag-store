@@ -5,7 +5,7 @@ export default function Navbar() {
 
 
   return (
-    <nav className="bg-slate-900 text-white px-6 py-4 shadow-md">
+    <nav className="bg-slate-900 text-white px-6 py-6 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
 
         {/* Logo */}
@@ -33,7 +33,7 @@ export default function Navbar() {
           <NavLink
             to="/cart"
             className={({ isActive }) =>
-              `relative px-4 py-2 rounded-md font-medium transition ${
+              `relative px-6 py-2 rounded-md font-medium transition ${
                 isActive
                   ? "border border-red-400 bg-yellow-400  text-black"
                   : "bg-white text-slate-900 hover:bg-yellow-400"

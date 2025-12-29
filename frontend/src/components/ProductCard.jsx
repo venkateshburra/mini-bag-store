@@ -43,7 +43,7 @@ export default function ProductCard({ product }) {
           to={`/product/${product._id}`}
           className="
             block mt-4 text-center
-            bg-slate-900 text-white py-2 rounded-lg
+            bg-slate-950 text-white py-2 rounded-lg
             transition-all duration-300
             hover:bg-slate-950 hover:tracking-wide
           "
