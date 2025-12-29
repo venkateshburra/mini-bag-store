@@ -30,7 +30,7 @@ npm install
 
 Create a .env file using the example:
 
-PORT=3000  || YOUR_PORT
+PORT=3000  
 MONGO_URI=your_mongodb_connection_string  
   
 Start backend server:
