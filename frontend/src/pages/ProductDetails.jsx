@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { fetchProductById, addToCart } from "../api/api";
 import toast from "react-hot-toast";
@@ -6,6 +6,8 @@ import toast from "react-hot-toast";
 export default function ProductDetails() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
+
+  const navigate = useNavigate();
 
  useEffect(() => {
   const loadProduct = async () => {
@@ -22,7 +24,7 @@ export default function ProductDetails() {
 
   const handleAdd = async () => {
   await addToCart(product);
-
+    navigate('/cart')
   toast.success("Added to cart");
 };
 
