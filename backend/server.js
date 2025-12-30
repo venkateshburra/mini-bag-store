@@ -28,10 +28,11 @@ app.use("/api/checkout", checkRouter);
 app.use(express.static(path.join(__dirname, "frontend/dist")));
 
 // 👉 React Router fix (MUST BE LAST)
-// React Router fallback (SAFE with Node 22)
+app.use(express.static(path.join(__dirname, "dist")));
+
 app.get(/^\/(?!api).*/, (req, res) => {
   res.sendFile(
-    path.join(__dirname, "frontend/dist", "index.html")
+    path.join(__dirname, "dist", "index.html")
   );
 });
 
