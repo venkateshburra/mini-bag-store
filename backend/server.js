@@ -16,6 +16,7 @@ const app = express();
 const __dirname = path.resolve();
 
 
+
 app.use(cors());
 app.use(express.json());
 
@@ -35,6 +36,7 @@ app.get(/^\/(?!api).*/, (req, res) => {
     path.join(__dirname, "dist", "index.html")
   );
 });
+
 
 
 

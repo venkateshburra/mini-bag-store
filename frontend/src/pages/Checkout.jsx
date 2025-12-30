@@ -91,7 +91,7 @@ const submit = async (e) => {
 
           <button
             onClick={submit}
-            className="w-full bg-red-600 text-white py-3 rounded-lg hover:bg-red-700"
+            className="w-full bg-red-600 text-white py-3 cursor-pointer rounded-lg hover:bg-red-700"
           >
             Place Order (₹{total})
           </button>
