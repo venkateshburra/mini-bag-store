@@ -7,7 +7,7 @@ const router = express.Router();
 let cart = [];
 
 router.post("/", (req, res) => {
-  cart.push({
+  cart.unshift({
     ...req.body,
     cartItemId: randomUUID(),
   });
