@@ -22,7 +22,7 @@ export default function ProductDetails() {
     return (
       <div className="flex justify-center items-center h-[60vh]">
         <p className="text-xl font-semibold text-gray-600">
-          Loading products Details...
+          Loading product Details...
         </p>
       </div>
     );
