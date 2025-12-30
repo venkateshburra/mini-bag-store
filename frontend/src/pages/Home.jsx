@@ -4,15 +4,32 @@ import ProductCard from "../components/ProductCard";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const loadProducts = async () => {
-      const data = await fetchProducts();
-      setProducts(data);
+      try {
+        const data = await fetchProducts();
+        setProducts(data);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setLoading(false);
+      }
     };
 
     loadProducts();
   }, []);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-[60vh]">
+        <p className="text-xl font-semibold text-gray-600">
+          Loading products...
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div className="p-6 max-w-7xl mx-auto">
@@ -29,3 +46,4 @@ export default function Home() {
     </div>
   );
 }
+
